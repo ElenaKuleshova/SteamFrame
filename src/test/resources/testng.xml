@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Testing Download Steam Install File">
+    <test name="Download Steam Install File from Game page">
+        <classes>
+            <class name="steam.test.Test"/>
+
+
+        </classes>
+    </test>
+</suite>
