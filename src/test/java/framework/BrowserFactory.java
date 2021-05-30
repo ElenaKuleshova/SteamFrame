@@ -9,31 +9,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import static org.openqa.selenium.remote.BrowserType.CHROME;
-
-
 public class BrowserFactory {
 
-
     private static ResourcePropertiesManager resources;
-
     private static final String PROPERTIES_FILE = "config.properties";
     private static final String BROWSER_LANGUAGE = "locale";
-
-
     private WebDriver driver = null;
     private DriverManagerType driverManagerType;
 
     private static String fileDownloadDir = System.getProperty("user.dir")+ File.separator + "externalFiles" + File.separator + "downloadFiles";
-
     public static String getFileDownloadDir() {return fileDownloadDir;}
-
 
     public WebDriver setUp(String browserName) {
         resources = new ResourcePropertiesManager(PROPERTIES_FILE);
@@ -77,10 +66,6 @@ public class BrowserFactory {
             default:
                 System.out.println("Browser " + browserName + " is not supported");
                 break;
-
-
        }
         return driver;  }
-
-
 }

@@ -5,8 +5,6 @@ import java.util.Properties;
 
 public class ResourcePropertiesManager {
     protected Properties properties;
-
-
     public ResourcePropertiesManager(){
         properties = new Properties();
     }
