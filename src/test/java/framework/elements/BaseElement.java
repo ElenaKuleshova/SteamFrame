@@ -83,7 +83,7 @@ public class BaseElement {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public String getText(By locator) {
+    public String getText() {
         waitElementBeClickable();
         return getElement().getText();
     }
@@ -235,18 +235,5 @@ public void waitForFileCompleteDownload(String filename){
     waitForDownloadProgressComplete();
     waitForFileConvertFromTempExtension(filename);
 }
-
-    public Boolean isDownloadDirectoryContainsFile(String fileName){
-        String fileDownloadDir = BrowserFactory.getFileDownloadDir();
-        File directory = new File (fileDownloadDir);
-        File[] files = directory.listFiles();
-        Boolean filePresence = false;
-        for (File file : files) {
-            if (file.getName().contains(fileName)) {
-               filePresence = true;
-            }
-        }
-return filePresence;
-    }
 
 }

@@ -3,7 +3,7 @@
     <test name="Download Steam Install File from Game page">
         <classes>
             <class name="steam.test.SteamTest"/>
-            <parameter name="steamLanguage" value="English"/>
+            <parameter name="preferredSteamLanguage" value="English"/>
         </classes>
     </test>
 </suite>

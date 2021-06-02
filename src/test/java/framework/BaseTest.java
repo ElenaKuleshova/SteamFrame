@@ -36,10 +36,10 @@ public class BaseTest {
         }
     }
 
-    @Parameters({"steamLanguage"})
+    @Parameters({"preferredSteamLanguage"})
     @BeforeTest
-    public void setLangPropertiesFromFile(String steamLanguage){
-        LanguagePropertiesReader languagePropertiesReader = new LanguagePropertiesReader(steamLanguage);
+    public void setLangPropertiesFromFile(String prefferedSteamLanguage){
+        LanguagePropertiesReader languagePropertiesReader = new LanguagePropertiesReader(prefferedSteamLanguage);
         categoriesMenuItem = languagePropertiesReader.getLangProperty("store.categories");
         categoriesActionSubMenuItem = languagePropertiesReader.getLangProperty("storeCategories.action");
     }

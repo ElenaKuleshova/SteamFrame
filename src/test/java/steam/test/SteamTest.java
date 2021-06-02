@@ -11,11 +11,11 @@ import steam.forms.*;
 public class SteamTest extends BaseTest {
 
 
-@Parameters({"steamLanguage"})
+@Parameters({"preferredSteamLanguage"})
     @Test
-    public void downloadSteamInstallFile(String steamLanguage) {
+    public void downloadSteamInstallFile(String preferredSteamLanguage) {
         Header header = new Header();
-        header.selectLanguage(steamLanguage);
+        header.selectLanguage(preferredSteamLanguage);
         HomePage homePage = new HomePage();
         homePage.navigateMenuSubItem(categoriesMenuItem, categoriesActionSubMenuItem);
        GenrePage genrePage = new GenrePage();
