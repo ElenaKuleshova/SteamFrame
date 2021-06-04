@@ -129,9 +129,14 @@ public class BaseElement {
     }
 
     public boolean isElementContainsGivenValue(int givenValue){
-        String elementText = getElement().getText();
-        elementText = elementText.substring(1,elementText.length()-1);
-        return Integer.parseInt(elementText) == givenValue;
+        List<WebElement> elements = getElements(locator);
+        for (WebElement element : elements){
+            String elementText = getElement().getText();
+            elementText = elementText.substring(1,elementText.length()-1);
+            if (Integer.parseInt(elementText) == givenValue){
+                return true;
+            }
+        } return false;
     }
 
     public boolean isElementPresentedOnPage(){
